@@ -61,6 +61,7 @@ python3 scripts/plot_results.py -n ./nodes_n_d.csv -e ./edges_n_d.csv
 Clusters are simulated using randomly centered normal dstributions in 2D. Then the optimizer attempts to minimize `n` and `d` for the problem of finding representative data points.
 
 n = number of representatives (clusters)
+
 d = total distance of representative to their constituents 
 
 Larger dots are representatives
