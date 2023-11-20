@@ -8,7 +8,7 @@ The solution presented here finds the independent objective minima and then find
 
 For this demonstration, an extension of the clustering problem is presented, where the goal is to select a subset of "representative" datapoints to cover all points in the dataset with minimal distance.
 
-Recommendations, questions, criticisms, discussion, etc. are welcome, please do not hesitate to open an issue or contact me.
+Recommendations, questions, criticisms, discussion, etc. are welcome, please do not hesitate to open an issue/discussion.
 
 ## Building
 
