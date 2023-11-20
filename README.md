@@ -1,7 +1,7 @@
 # multiobjective_optimization
-A simple demo of the use of the distance metric to minimize 2 objectives jointly. Based loosely on the concepts presented in this [paper](https://www.eng.buffalo.edu/Research/DOES/administrator/components/com_jresearch/files/publications/SMO-01-EK.pdf)
+A simple demo of the use of the square distance metric to jointly minimize 2 objectives in an Integer Linear Programming problem using [or-tools](https://github.com/google/or-tools). Based loosely on the concepts presented in this [paper](https://www.eng.buffalo.edu/Research/DOES/administrator/components/com_jresearch/files/publications/SMO-01-EK.pdf)
 
-
+#### Background
 A problem with competing objectives, such as clustering, involves two criteria which cannot be independently optimized without reducing the score of each other.
 
 The solution presented here finds the independent objective minima and then finds a solution which jointly minimizes the distance in 2D space from the (min_1,min_2) "utopia" point. 
