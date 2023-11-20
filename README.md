@@ -64,10 +64,10 @@ n = number of representatives (clusters)
 
 d = total distance of representative to their constituents 
 
-Larger dots are representatives
-Smaller dots are constituents
-Lines show which points are constituents of a representative
-Colors correspond to clusters
+- Larger dots are representatives
+- Smaller dots are constituents
+- Lines show which points are constituents of a representative
+- Colors correspond to clusters
 
 ### Min(d) solution
 When **distance** is minimized independently, the model chooses almost the maximum number of representatives possible. Only several representatives have more than one child node.
