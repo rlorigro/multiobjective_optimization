@@ -62,7 +62,7 @@ python3 scripts/plot_results.py -n ./nodes_n_d.csv -e ./edges_n_d.csv
 
 Clusters are simulated using randomly centered normal distributions in 2D:
 
-For each cluster $ i = 0, 1, \ldots, n-1 $:
+For each cluster:
 
 1. Sample a random cluster center:
 
@@ -70,16 +70,15 @@ For each cluster $ i = 0, 1, \ldots, n-1 $:
    x_{\text{offset}}, y_{\text{offset}} \sim \mathcal{U}(v_{\text{min}}+1, v_{\text{max}}-1)
    $$
    
-2. For each of the $ n_{\text{samples}} $ points:
-    - Sample from a Gaussian distribution:
+2. For each of the points, sample from a Gaussian distribution:
 
-      $$
-      x = x_{\text{offset}} + \epsilon_x, \quad \epsilon_x \sim \mathcal{N}(0, \sigma^2)
-      $$
+    $$
+    x = x_{\text{offset}} + \epsilon_x, \quad \epsilon_x \sim \mathcal{N}(0, \sigma^2)
+    $$
 
-      $$
-      y = y_{\text{offset}} + \epsilon_y, \quad \epsilon_y \sim \mathcal{N}(0, \sigma^2)
-      $$
+    $$
+    y = y_{\text{offset}} + \epsilon_y, \quad \epsilon_y \sim \mathcal{N}(0, \sigma^2)
+    $$
 
 
 Then the optimizer jointly minimizes `n` and `d` to find representative data points.
@@ -90,11 +89,11 @@ d = total distance of representative to their constituents
 
 ### Details of clustering model
 
-Let $ N $ be the number of nodes, each with coordinates $ \textbf{coords}[i] = (x_i, y_i) $. Define:
+Let $N$ be the number of nodes, each with coordinates $\textbf{coords}[i] = (x_i, y_i)$. Define:
 
-- $ P_i \in \{0, 1\} $: Boolean variable indicating whether node $ i $ is a parent node.
-- $ E_{i,j} \in \{0, 1\} $: Boolean variable indicating whether there is a directed edge from node $ i $ to node $ j $.
-- $ d_{i,j} $: Edge cost, defined as the Euclidean distance between nodes $ i $ and $ j $, scaled and rounded to 1 decimal of precision:
+- $P_i \in \{0, 1\ $: Boolean variable indicating whether node $i$ is a parent node.
+- $E_{i,j} \in \{0, 1\}$: Boolean variable indicating whether there is a directed edge from node $i$ to node $j$.
+- $d_{i,j}$: Edge cost, defined as the Euclidean distance between nodes $i$ and $j$, scaled and rounded to 1 decimal of precision:
   
   $$
   d_{i,j} = \left\lfloor 10 \cdot \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2} + 0.5 \right\rfloor
