@@ -80,14 +80,9 @@ $$
 y = y_{\text{offset}} + \epsilon_y, \quad \epsilon_y \sim \mathcal{N}(0, \sigma^2)
 $$
 
-
-Then the optimizer jointly minimizes `n` and `d` to find representative data points.
-
-n = number of representatives (clusters)
-
-d = total distance of representative to their constituents 
-
 ### Details of clustering model
+
+The optimizer jointly minimizes $cost_n$ and $cost_d$ to find representative data points.
 
 Let $N$ be the number of nodes, each with coordinates $\textbf{coords}[i] = (x_i, y_i)$. Define:
 
