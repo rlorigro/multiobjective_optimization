@@ -114,7 +114,6 @@ Total edge cost:
 $$
 \text{cost}_d = \sum_{\substack{i=0 \\ j \neq i}}^{N-1} d_{i,j} \cdot E_{i,j}
 $$
-
 The joint objective is equivalent to minimizing the L2 norm:
 
 $$
