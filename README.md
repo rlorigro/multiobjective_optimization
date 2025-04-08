@@ -91,7 +91,7 @@ d = total distance of representative to their constituents
 
 Let $N$ be the number of nodes, each with coordinates $\textbf{coords}[i] = (x_i, y_i)$. Define:
 
-- $P_i \in \{0, 1\ $: Boolean variable indicating whether node $i$ is a parent node.
+- $P_i \in \{0, 1\}$: Boolean variable indicating whether node $i$ is a parent node.
 - $E_{i,j} \in \{0, 1\}$: Boolean variable indicating whether there is a directed edge from node $i$ to node $j$.
 - $d_{i,j}$: Edge cost, defined as the Euclidean distance between nodes $i$ and $j$, scaled and rounded to 1 decimal of precision:
   
