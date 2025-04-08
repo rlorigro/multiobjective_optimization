@@ -103,13 +103,13 @@ $$
 
 Two cost variables are accumulated:
 
-- Number of parent nodes:
+Number of parent nodes:
 
 $$
 \text{cost}_n = \sum_{i=0}^{N-1} P_i
 $$
 
-- Total edge cost:
+Total edge cost:
 
 $$
 \text{cost}_d = \sum_{\substack{i=0 \\ j \neq i}}^{N-1} d_{i,j} \cdot E_{i,j}
