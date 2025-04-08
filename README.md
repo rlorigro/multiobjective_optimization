@@ -65,12 +65,14 @@ Clusters are simulated using randomly centered normal distributions in 2D:
 For each cluster $ i = 0, 1, \ldots, n-1 $:
 
 1. Sample a random cluster center:
+
    $$
    x_{\text{offset}}, y_{\text{offset}} \sim \mathcal{U}(v_{\text{min}}+1, v_{\text{max}}-1)
    $$
    
 2. For each of the $ n_{\text{samples}} $ points:
     - Sample from a Gaussian distribution:
+
       $$
       x = x_{\text{offset}} + \epsilon_x, \quad \epsilon_x \sim \mathcal{N}(0, \sigma^2)
       $$
@@ -93,6 +95,7 @@ Let $ N $ be the number of nodes, each with coordinates $ \textbf{coords}[i] = (
 - $ P_i \in \{0, 1\} $: Boolean variable indicating whether node $ i $ is a parent node.
 - $ E_{i,j} \in \{0, 1\} $: Boolean variable indicating whether there is a directed edge from node $ i $ to node $ j $.
 - $ d_{i,j} $: Edge cost, defined as the Euclidean distance between nodes $ i $ and $ j $, scaled and rounded to 1 decimal of precision:
+  
   $$
   d_{i,j} = \left\lfloor 10 \cdot \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2} + 0.5 \right\rfloor
   $$
@@ -102,10 +105,13 @@ Let $ N $ be the number of nodes, each with coordinates $ \textbf{coords}[i] = (
 Two cost variables are accumulated:
 
 - Number of parent nodes:
+
   $$
   \text{cost}_n = \sum_{i=0}^{N-1} P_i
   $$
+
 - Total edge cost:
+
   $$
   \text{cost}_d = \sum_{\substack{i=0 \\ j \neq i}}^{N-1} d_{i,j} \cdot E_{i,j}
   $$
@@ -118,13 +124,17 @@ $$
 
 where 
 
-$n_{\text{range}} = n_{\max} - n_{\min}$
+$$
+n_{\text{range}} = n_{\max} - n_{\min}
+$$
 
-$d_{\text{range}} = d_{\max} - d_{\min}$
+$$
+d_{\text{range}} = d_{\max} - d_{\min}
+$$
 
 #### Constraints
 
-(see implementation for details)
+_see code for details_
 
 ## Results
 
